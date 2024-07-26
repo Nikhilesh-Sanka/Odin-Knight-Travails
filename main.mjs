@@ -18,19 +18,19 @@ function possibleMoves(point) {
     [x + 2, y - 1],
   ];
   possibleMoves = possibleMoves.filter((point) => {
-    return point.every((coord) => coord >= 1 && coord <= 64);
+    return point.every((coord) => coord >= 1 && coord <= 8);
   });
   return possibleMoves;
 }
 function knightMoves(startPoint, endPoint) {
   if (
-    startPoint[0] > 64 ||
+    startPoint[0] > 8 ||
     startPoint[0] < 1 ||
-    startPoint[1] > 64 ||
+    startPoint[1] > 8 ||
     startPoint[1] < 1 ||
-    endPoint[0] > 64 ||
+    endPoint[0] > 8 ||
     endPoint[0] < 1 ||
-    endPoint[1] > 64 ||
+    endPoint[1] > 8 ||
     endPoint[1] < 1
   ) {
     console.log("enter valid points");
